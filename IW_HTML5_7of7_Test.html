@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>ОWТ. Тест</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <link rel="shortcut icon" href="webLogo.png" type="image/png" /><!-- В EI иконка почему-то не работает. Будет время, разобраться, почему. -->
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="header">
+         <header>
+            <img src="webLogo.png" alt="Логотип" height="100" />
+            <h1>Основы Web-технологий</h1>
+            <ul class="menu">
+               <li><a href="IW_HTML5_1of7_Index.html">Главная</a></li>
+               <li><a href="IW_HTML5_2of7_WebTech.html">Web-технологии</a>
+                  <ul class="hideMenu">
+                     <li><a href="IW_HTML5_3of7_HTML5.html">HTML5</a></li>
+                     <li><a href="IW_HTML5_4of7_CSS3.html">CSS3</a></li>
+                     <li><a href="IW_HTML5_5of7_JS.html">JavaScript</a></li>
+                  </ul>
+               </li>
+               <li><a href="IW_HTML5_6of7_Calc.html">Калькулятор</a></li>
+               <li><a href="IW_HTML5_7of7_Test.html">Тест</a></li>
+            </ul>
+         </header>
+      </div>
+      <div>
+         <form id="test" name="test" > <!-- action="#" атрибут формы action нам не нужен, так как данные никуда не будут отправлятся, их будет js обрабатывать. -->
+            <p>
+               Какой тег предназначен для создания ссылок:<br /> <!-- IE до версии 6.0 включительно не позволяет активировать поле формы при щелчке по тексту, когда поле с текстом находится внутри <label> (в контейнере <label>, т.е. если не использова id).
+               IE до версии 8.0 включительно корректно работает с <label> только при наличии в нём именно ТЕКСТА (с картинками не работает). 
+               Нижний абзац теста будет сделан через id, остальные - контейнером.-->
+               <input type="radio" name="linkTeg" id="linkTeg1" value="a" /><label for="linkTeg1">&lt;a&gt;</label><br />
+               <input type="radio" name="linkTeg" id="linkTeg2" value="a &frasl;" /><label for="linkTeg2">&lt;a /&gt;</label><br />
+               <input type="radio" name="linkTeg" id="linkTeg3" value="ref" /><label for="linkTeg3">&lt;ref&gt;</label><br />
+               <input type="radio" name="linkTeg" id="linkTeg4" value="ref &frasl;" /><label for="linkTeg4">&lt;ref /&gt;</label><br />
+            </p>
+            <p><!-- Все следующие абзацы теста сделаны через контейнер <label> -->
+               Какой тег предназначен для создания нумерованного списка:<br />
+               <label><input type="radio" name="listTeg" value="li" />&lt;li&gt;</label><br />
+               <label><input type="radio" name="listTeg" value="dl" />&lt;dl&gt;</label><br />
+               <label><input type="radio" name="listTeg" value="ol" />&lt;ol&gt;</label><br />
+               <label><input type="radio" name="listTeg" value="ul" />&lt;ul&gt;</label><br />
+            </p>
+            <p>
+               Какой тег предназначен для передачи служебной информации браузеру:<br />
+               <label><input type="radio" name="infoServiceTeg" value="info" />&lt;info&gt;</label><br />
+               <label><input type="radio" name="infoServiceTeg" value="info &frasl;" />&lt;info /&gt;</label><br />
+               <label><input type="radio" name="infoServiceTeg" value="meta" />&lt;meta&gt;</label><br />
+               <label><input type="radio" name="infoServiceTeg" value="meta &frasl;" />&lt;meta /&gt;</label><br />
+            </p>
+            <p>Какие теги используются при создании таблицы:<br />
+               <label><input type="checkbox" name="tebleTeg" value="bodyt" />&lt;bodyt&gt;</label><br />
+               <label><input type="checkbox" name="tebleTeg" value="td" />&lt;td&gt;</label><br />
+               <label><input type="checkbox" name="tebleTeg" value="groupcol" />&lt;groupcol&gt;</label><br />
+               <label><input type="checkbox" name="tebleTeg" value="col &frasl;" />&lt;col /&gt;</label><br />
+            </p>
+            <p>Какие атрибуты используются при создании форм:<br />
+               <label><input type="checkbox" name="formAtr" value="autocomplete" />autocomplete</label><br />
+               <label><input type="checkbox" name="formAtr" value="action" />action</label><br />
+               <label><input type="checkbox" name="formAtr" value="charset" />charset</label><br />
+               <label><input type="checkbox" name="formAtr" value="validate" />validate</label><br />
+            </p>
+            <p>
+               <!-- Тэг <input> здесь не применим, т.к. мы ничего на сервер отправлять не будем, все будет обрабатываться с помощью JS. Поэтому cледующую ниже строку можно спокойно удалять:
+               <input type="submit" name="submit" value="Результат"/>. Оставляю только из жалости к собственному труду. Здесь правильно использовать тэг <button> как просто кнопку, без определенного действия на данный момент. Смотри ниже: -->
+               <button class="bottonTest" type="button" form="test" name="result" >Результат</button>
+            </p>
+         </form>
+      </div>
+      <div class="footer">
+         <footer>
+            <address>
+               <a href="mailto:savitskiyvv80@gmail.com">Пишите: savitskiyvv80@gmail.com</a>
+            </address>
+            &copy; Савицкий Виталий Валерьевич, 2016 год.
+         </footer>
+      </div>
+   </body>
+</html>
